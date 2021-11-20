@@ -1,0 +1,23 @@
+ALGORITHM checkpoint
+VAR
+
+    mot, voy, i : INTEGER
+    c : char
+BEGIN
+    mot:=1
+    voy:=0
+    i:=1
+    WHILE (c<>".") DO
+        i:=i+1
+        IF (c=" ") THEN
+            mot:=mot+1
+        END_IF
+        IF (c in{'a','o','i','e','y','u'}) THEN
+            voy:=voy+1
+        END_IF
+
+    END_WHILE
+    write("nombre de cractéres", i)
+    write("nobmre de voyelles", voy)
+    write("nombre de mots", mot)
+END
